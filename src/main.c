@@ -1,16 +1,7 @@
 /**********************************************************************
-* CPEG222 Project 9: Servo Drive Control (closed-loop speed control)
-* NUCLEO-F446ZE, bare-metal CMSIS, 180 MHz
-*
-*  Servo PWM : PD12 (left, TIM4_CH1), PD14 (right, TIM4_CH3)
-*  Feedback  : PE13 (left, TIM1_CH3/4), PE9 (right, TIM1_CH1/2)  input capture
-*  Pot       : PC2 (ADC3_IN12) -> target 0..140 RPM
-*  Buttons   : UP PF7, DOWN PE5, LEFT PF9, RIGHT PE6, CENTER PF8
-*  OLED      : mode, actual PWM (us) and actual RPM of each servo
-*  SSD       : target RPM
-*  Extra     : tank turn (press LEFT or RIGHT twice in a row)
-*
-*  Interrupts kept here: SysTick (1 ms), TIM5 (SSD refresh), TIM1 capture
+Author: F. MAILOM
+CPEG222 Project 9, 11/13/26
+NucleoF466ZE CMSIS Control 360 Servo speed and direction
 **********************************************************************/
 #include "stm32f4xx.h"
 #include "SysClock180MHz.h"
